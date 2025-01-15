@@ -1,6 +1,8 @@
-import { bootstrapApplication } from '@angular/platform-browser';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { appConfig } from './app/app.config';
-import { AppComponent } from './app/app.component';
+import { AppModule } from './app/app.module';
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+// Bootstrap the application with the app module and app config
+platformBrowserDynamic().bootstrapModule(AppModule, {
+  providers: [{ provide: 'APP_CONFIG', useValue: appConfig }],
+});

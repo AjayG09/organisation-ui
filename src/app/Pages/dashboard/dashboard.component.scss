@@ -1,48 +1,3 @@
-.mat-toolbar.mat-primary {
-  background: linear-gradient(
-    90deg,
-    #f0060b 0%,
-    #f0070c 0%,
-    #cc26d5 52.6%,
-    #7702ff 100%
-  );
-  color: #fff;
-}
-.background-gradient {
-  background: linear-gradient(
-    90deg,
-    #f0060b 0%,
-    #f0070c 0%,
-    #cc26d5 52.6%,
-    #7702ff 100%
-  );
-}
-.title {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  margin-left: 10px;
-}
-.angular-logo {
-  width: 120px;
-  padding: 10px;
-  border-radius: 5px;
-  max-width: 120px;
-  background: #fffffff0;
-}
-
-.white-icon {
-  color: white;
-}
-/* Note: If you're using an SVG icon, you should make the class target the `<svg>` element */
-.white-icon svg {
-  fill: white;
-}
-
-.mat-drawer-container {
-  height: calc(100% - 64px);
-}
-
 :host {
   --bright-blue: oklch(51.01% 0.274 263.83);
   --electric-violet: oklch(53.18% 0.28 296.97);
@@ -115,10 +70,22 @@ p {
 }
 
 main {
+  width: 100%;
+  min-height: 100%;
   display: flex;
+  // justify-content: center;
+  // align-items: center;
   padding: 1rem;
   box-sizing: inherit;
   position: relative;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
 }
 
 .angular-logo {
@@ -127,7 +94,9 @@ main {
 
 .content {
   display: flex;
+  justify-content: space-around;
   width: 100%;
+  max-width: 700px;
   margin-bottom: 3rem;
 }
 
@@ -177,11 +146,6 @@ main {
   background: color-mix(in srgb, var(--pill-accent) 15%, transparent);
 }
 
-.is-active {
-  color: white;
-  background: color-mix(in srgb, var(--pill-accent) 50%, transparent);
-}
-
 .pill-group .pill:nth-child(6n + 1) {
   --pill-accent: var(--bright-blue);
 }
@@ -226,15 +190,4 @@ main {
     background: var(--red-to-pink-to-purple-horizontal-gradient);
     margin-block: 1.5rem;
   }
-}
-
-.left-side {
-  width: 150px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.right-side {
-  width: 100%;
 }

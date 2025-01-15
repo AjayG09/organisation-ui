@@ -1,12 +1,37 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
+  standalone: false,
 })
 export class AppComponent {
-  title = 'organisation-ui';
+  badgevisible = false;
+  badgevisibility() {
+    this.badgevisible = true;
+  }
+  title: string = 'Organisation UI';
+  links: any[] = [
+    {
+      name: 'Dashboard',
+      link: '/dashboard',
+    },
+    {
+      name: 'Roles',
+      link: '/roles',
+    },
+    {
+      name: 'Clients',
+      link: '/clients',
+    },
+    {
+      name: 'Projects',
+      link: '/projects',
+    },
+    {
+      name: 'Employees',
+      link: '/employees',
+    },
+  ];
 }
