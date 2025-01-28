@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AddRoleComponent } from './add-role.component';
+import { AppModule } from '../../../app.module';
 
 describe('AddRoleComponent', () => {
   let component: AddRoleComponent;
@@ -8,7 +9,7 @@ describe('AddRoleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AddRoleComponent],
+      imports: [AddRoleComponent, AppModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AddRoleComponent);

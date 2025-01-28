@@ -1,23 +1,17 @@
 import { ResolveFn } from '@angular/router';
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { RolesEntityService } from '../../Services/Roles/roles-entity.service';
 import { filter, first, tap } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root',
-})
-export class RolesResolver {
-  constructor(private rolesService: RolesEntityService) {}
-
-  resolve: ResolveFn<boolean> = (route, state) => {
-    return this.rolesService.loaded$.pipe(
-      tap((loaded) => {
-        if (!loaded) {
-          this.rolesService.getAll();
-        }
-      }),
-      filter((loaded) => !!loaded),
-      first(),
-    );
-  };
-}
+export const rolesResolver: ResolveFn<boolean> = (route, state) => {
+  const rolesService = inject(RolesEntityService);
+  return rolesService.loaded$.pipe(
+    tap((loaded) => {
+      if (!loaded) {
+        rolesService.getAll();
+      }
+    }),
+    filter((loaded) => !!loaded),
+    first(),
+  );
+};

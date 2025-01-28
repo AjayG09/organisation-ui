@@ -2,7 +2,7 @@
 @use "@angular/material" as mat;
 // @use '@angular/material/prebuilt-themes/azure-blue';
 @use "@angular/material/prebuilt-themes/indigo-pink.css";
-@use "@angular/material/core/theming/all-theme";
+// @use "@angular/material/core/theming/all-theme";
 @include mat.core();
 
 $myapp-theme-primary: mat.m2-define-palette(

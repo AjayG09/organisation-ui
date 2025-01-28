@@ -6,7 +6,7 @@ import { ClientsComponent } from './Pages/clients/clients.component';
 import { ProjectsComponent } from './Pages/projects/projects.component';
 import { EmployeesComponent } from './Pages/employees/employees.component';
 import { RolesComponent } from './Pages/roles/roles.component';
-import { RolesResolver } from './Resolver/Roles/roles.resolver';
+import { rolesResolver } from './Resolver/Roles/roles.resolver';
 import { clientsResolver } from './Resolver/Clients/clients.resolver';
 import { employeesResolver } from './Resolver/Employees/employees.resolver';
 import { projectsResolver } from './Resolver/Projects/projects.resolver';
@@ -42,14 +42,14 @@ export const routes: Routes = [
     component: EmployeesComponent,
     resolve: {
       employees: employeesResolver,
-      roles: RolesResolver,
+      roles: rolesResolver,
     },
   },
   {
     path: 'roles',
     component: RolesComponent,
     resolve: {
-      roles: RolesResolver,
+      roles: rolesResolver,
     },
   },
   {
