@@ -1,10 +1,60 @@
 /* You can add global styles to this file, and also import other style files */
-@import "@angular/material/prebuilt-themes/azure-blue.css";
+@use "@angular/material" as mat;
+// @use '@angular/material/prebuilt-themes/azure-blue';
+@use "@angular/material/prebuilt-themes/indigo-pink.css";
+@use "@angular/material/core/theming/all-theme";
+@include mat.core();
+
+$myapp-theme-primary: mat.m2-define-palette(
+  mat.$m2-indigo-palette,
+  A400,
+  A100,
+  A700
+);
+$myapp-theme-accent: mat.m2-define-palette(mat.$m2-indigo-palette);
+$myapp-theme-warn: mat.m2-define-palette(mat.$m2-red-palette);
+
+$myapp-theme: mat.m2-define-light-theme(
+  (
+    color: (
+      primary: $myapp-theme-primary,
+      accent: $myapp-theme-accent,
+      warn: $myapp-theme-warn,
+    ),
+  )
+);
+
+@include mat.all-component-themes($myapp-theme);
+
 html,
 body {
   height: 100%;
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-elevation-z8 {
+  box-shadow: none;
+  border: 1px solid #e0e0e0;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cdk-footer-row[hidden] {
+  width: 100%;
+  display: none !important;
+}
+
+.form-group {
+  display: flex;
+  gap: 10px;
+}
+
+.w-100 {
+  width: 100%;
 }

@@ -1,0 +1,65 @@
+<div class="add-role mat-elevation-z8">
+  <h4 class="mat-h4 mat-center" *ngIf="this.data === null">Add Client</h4>
+  <h4 class="mat-h4 mat-center" *ngIf="this.data !== null">Edit Client</h4>
+  <form [formGroup]="clientForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <mat-form-field class="w-100">
+        <input
+          matInput
+          placeholder="Person Name"
+          formControlName="contactPersonName"
+        />
+      </mat-form-field>
+      <mat-form-field class="w-100">
+        <input
+          matInput
+          placeholder="Company Name"
+          formControlName="companyName"
+        />
+      </mat-form-field>
+      <mat-form-field class="w-100">
+        <input matInput placeholder="Contact No" formControlName="contactNo" />
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field class="w-10">
+        <input matInput placeholder="City" formControlName="city" />
+      </mat-form-field>
+      <mat-form-field class="w-10">
+        <input matInput placeholder="state" formControlName="state" />
+      </mat-form-field>
+      <mat-form-field class="w-10">
+        <input matInput placeholder="pincode" formControlName="pincode" />
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field class="w-100">
+        <textarea
+          matInput
+          placeholder="Address"
+          formControlName="address"
+        ></textarea>
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field class="w-100">
+        <input
+          matInput
+          placeholder="Employee Strength"
+          formControlName="employeeStrength"
+        />
+      </mat-form-field>
+      <mat-form-field class="w-100">
+        <input matInput placeholder="GST No" formControlName="gstNo" />
+      </mat-form-field>
+      <mat-form-field class="w-100">
+        <input matInput placeholder="Reg No" formControlName="regNo" />
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <button mat-raised-button color="primary" type="submit">Save</button>
+    </div>
+  </form>
+</div>

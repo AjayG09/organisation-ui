@@ -1,6 +1,175 @@
 {
-  "users": [
-    { "id": 1, "name": "John Doe" },
-    { "id": 2, "name": "Jane Doe" }
+  "roles": [
+    {
+      "id": 1,
+      "name": "Software Engineer"
+    },
+    {
+      "name": "Senior Software Engineer",
+      "id": 2
+    },
+    {
+      "id": 4,
+      "name": "Team Lead I updated"
+    }
+  ],
+  "clients": [
+    {
+      "companyName": "TCS",
+      "contactPersonName": "Test",
+      "contactNo": "234",
+      "address": "TEST",
+      "city": "test",
+      "pincode": "43",
+      "state": "23",
+      "employeeStrength": "10",
+      "gstNo": "30",
+      "regNo": "3",
+      "id": 1
+    },
+    {
+      "companyName": "Mastek",
+      "contactPersonName": "Client",
+      "contactNo": "1234",
+      "address": "1234",
+      "city": "P",
+      "pincode": "1234",
+      "state": "r",
+      "employeeStrength": "12",
+      "gstNo": "1",
+      "regNo": "2",
+      "id": 2
+    },
+    {
+      "id": 4,
+      "companyName": "2",
+      "contactPersonName": "test updated",
+      "contactNo": "3",
+      "address": "3",
+      "city": "3",
+      "pincode": "3",
+      "state": "3",
+      "employeeStrength": "23",
+      "gstNo": "3",
+      "regNo": "2"
+    },
+    {
+      "companyName": "23",
+      "contactPersonName": "23r",
+      "contactNo": "23",
+      "address": "12345ty",
+      "city": "qwef",
+      "pincode": "asdf",
+      "state": "wedfg",
+      "employeeStrength": "asdc",
+      "gstNo": "qwerg",
+      "regNo": "sdf",
+      "id": 5
+    },
+    {
+      "companyName": "23",
+      "contactPersonName": "123",
+      "contactNo": "23",
+      "address": "est",
+      "city": "2",
+      "pincode": "2",
+      "state": "2",
+      "employeeStrength": "2",
+      "gstNo": "3q3",
+      "regNo": "22",
+      "id": 6
+    }
+  ],
+  "employees": [
+    {
+      "id": 4,
+      "name": "Ajay Kaka Gejage",
+      "email": "ajay14936@mastek.com",
+      "phone": "07977197966",
+      "address": "604, BDL NO. 1/A, MANASSAROVAR COMPLEX, SECTOR 34, KAMOTHE, NAVI MUMBAI 410209",
+      "role": 2,
+      "status": "Active",
+      "updated_at": "2025-01-22T14:07:24.394Z"
+    },
+    {
+      "name": "Tested",
+      "email": "test@test.com",
+      "phone": "123456",
+      "address": "tyest",
+      "role": 1,
+      "status": "Active",
+      "created_at": "2025-01-22T06:25:09.720Z",
+      "updated_at": "2025-01-22T06:25:09.720Z",
+      "id": 5
+    },
+    {
+      "name": "Tested",
+      "email": "1234",
+      "phone": "234",
+      "address": "test",
+      "role": 1,
+      "status": "Active",
+      "created_at": "2025-01-23T06:00:45.942Z",
+      "updated_at": "2025-01-23T06:00:45.942Z",
+      "id": 6
+    },
+    {
+      "name": "Added New",
+      "email": "test@test.com",
+      "phone": "2345",
+      "address": "123456 updated",
+      "role": 4,
+      "status": "234",
+      "created_at": "2025-01-28T05:50:14.512Z",
+      "updated_at": "2025-01-28T05:50:14.512Z",
+      "id": 7
+    }
+  ],
+  "projects": [
+    {
+      "clientProjectId": "",
+      "projectName": "Test",
+      "startDate": "2025-01-14T18:30:00.000Z",
+      "expectedEndDate": "2025-01-21T18:30:00.000Z",
+      "leadByEmpId": "test",
+      "completedDate": "",
+      "contactPerson": "Nilesh",
+      "contactPersonContactNo": "12345",
+      "totalEmpWorking": "20",
+      "projectCost": "20",
+      "projectDetails": "Testd",
+      "contactPersonEmailId": "test@test.com",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "clientProjectId": 5,
+      "projectName": "Bottomline",
+      "startDate": "2025-01-14T18:30:00.000Z",
+      "expectedEndDate": "2025-01-30T18:30:00.000Z",
+      "leadByEmpId": 4,
+      "completedDate": "",
+      "contactPerson": "Mahesh",
+      "contactPersonContactNo": "12344545",
+      "totalEmpWorking": "30",
+      "projectCost": "200000",
+      "projectDetails": "Panvel",
+      "contactPersonEmailId": "test@test.com"
+    },
+    {
+      "id": 3,
+      "clientProjectId": 1,
+      "projectName": "23",
+      "startDate": "2025-01-15T18:30:00.000Z",
+      "expectedEndDate": "2025-01-30T18:30:00.000Z",
+      "leadByEmpId": 4,
+      "completedDate": "",
+      "contactPerson": "test",
+      "contactPersonContactNo": "12345",
+      "totalEmpWorking": "23",
+      "projectCost": "12",
+      "projectDetails": "2 ",
+      "contactPersonEmailId": "updated@test.com"
+    }
   ]
 }

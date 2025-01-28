@@ -1,0 +1,121 @@
+<div class="add-project mat-elevation-z8">
+  <h4 class="mat-h4 mat-center" *ngIf="this.data === null">Add Project</h4>
+  <h4 class="mat-h4 mat-center" *ngIf="this.data !== null">Edit Project</h4>
+  <form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <mat-form-field class="w-100">
+        <input
+          matInput
+          placeholder="Project Name"
+          formControlName="projectName"
+        />
+      </mat-form-field>
+      <mat-form-field class="w-100">
+        <input
+          matInput
+          [matDatepicker]="startDatePicker"
+          placeholder="Start Date"
+          formControlName="startDate"
+        />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="startDatePicker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #startDatePicker></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field class="w-100">
+        <input
+          matInput
+          [matDatepicker]="endDatePicker"
+          placeholder="Expected End Date"
+          formControlName="expectedEndDate"
+        />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="endDatePicker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #endDatePicker></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field class="w-100">
+        <input
+          matInput
+          placeholder="Contact Person"
+          formControlName="contactPerson"
+        />
+      </mat-form-field>
+      <mat-form-field class="w-100">
+        <input
+          matInput
+          placeholder="Contact Person Contact No"
+          formControlName="contactPersonContactNo"
+        />
+      </mat-form-field>
+      <mat-form-field class="w-100">
+        <input
+          matInput
+          placeholder="Contact Person Email ID"
+          formControlName="contactPersonEmailId"
+        />
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field class="w-100">
+        <input
+          matInput
+          placeholder="Project Cost"
+          formControlName="projectCost"
+        />
+      </mat-form-field>
+      <mat-form-field class="w-100">
+        <input
+          matInput
+          placeholder="Total Employees Working"
+          formControlName="totalEmpWorking"
+        />
+      </mat-form-field>
+      <mat-form-field class="w-100">
+        <textarea
+          matInput
+          placeholder="Project Details"
+          formControlName="projectDetails"
+        ></textarea>
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field class="w-100">
+        <mat-select
+          placeholder="Lead By Employee ID"
+          formControlName="leadByEmpId"
+        >
+          <mat-option
+            *ngFor="let employee of employeeService.entities$ | async"
+            [value]="employee.id"
+          >
+            {{ employee.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field class="w-100">
+        <mat-select placeholder="Client" formControlName="clientProjectId">
+          <mat-option
+            *ngFor="let client of clientService.entities$ | async"
+            [value]="client.id"
+          >
+            {{ client.contactPersonName }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <button mat-raised-button color="primary" type="submit">Save</button>
+    </div>
+  </form>
+</div>

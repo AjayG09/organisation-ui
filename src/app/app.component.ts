@@ -11,7 +11,7 @@ export class AppComponent {
   badgevisibility() {
     this.badgevisible = true;
   }
-  title: string = 'Organisation UI';
+  title = 'Organisation UI';
   links: any[] = [
     {
       name: 'Dashboard',

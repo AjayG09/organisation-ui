@@ -8,7 +8,10 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "start:mock": "json-server --watch db.json --port 3000",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "mock:server": "nodemon server/server.ts",
+    "start:proxy": "ng serve --proxy-config proxy.config.json",
+    "prettier": "prettier --write ."
   },
   "private": true,
   "dependencies": {
@@ -22,6 +25,10 @@
     "@angular/platform-browser": "^19.0.0",
     "@angular/platform-browser-dynamic": "^19.0.0",
     "@angular/router": "^19.0.0",
+    "@ngrx/data": "^19.0.0",
+    "@ngrx/store-devtools": "^19.0.0",
+    "connect-api-mocker": "^1.11.0",
+    "json-server": "^0.17.4",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
@@ -35,12 +42,12 @@
     "angular-eslint": "19.0.2",
     "eslint": "^9.16.0",
     "jasmine-core": "~5.4.0",
-    "json-server": "^1.0.0-beta.3",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "nodemon": "^3.1.9",
     "prettier": "^3.4.2",
     "typescript": "~5.6.2",
     "typescript-eslint": "8.18.0"

@@ -173,13 +173,14 @@ main {
   text-decoration: none;
 }
 
-.pill:hover {
-  background: color-mix(in srgb, var(--pill-accent) 15%, transparent);
-}
-
 .is-active {
   color: white;
   background: color-mix(in srgb, var(--pill-accent) 50%, transparent);
+}
+
+.pill:hover {
+  color: var(--pill-accent);
+  background: color-mix(in srgb, var(--pill-accent) 15%, transparent);
 }
 
 .pill-group .pill:nth-child(6n + 1) {

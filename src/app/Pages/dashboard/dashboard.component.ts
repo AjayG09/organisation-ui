@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class DashboardComponent {
-  title: string = 'Organisation UI';
+  title = 'Organisation UI';
   links: any[] = [
     { name: 'Roles', link: 'https://angular.dev' },
     {

@@ -19,8 +19,10 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
+  imports: [MatFormField, MatFormFieldModule],
   exports: [
     MatInputModule,
     MatSelectModule,
@@ -42,6 +44,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatRadioModule,
     MatCheckboxModule,
     MatDialogModule,
+    MatFormField,
+    MatFormFieldModule,
   ],
 })
 export class MaterialModule {}
